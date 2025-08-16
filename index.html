@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sai Sir 🎉</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #ff4da6, #7b2ff7);
+            overflow-x: hidden;
+        }
+        h1 {
+            font-size: 48px;
+            color: gold;
+            text-shadow: 2px 2px #000;
+            margin-top: 20px;
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px gold, 0 0 20px orange;
+            }
+
+            100% {
+                text-shadow: 0 0 20px yellow, 0 0 40px red;
+            }
+        }
+        h2 {
+            font-size: 28px;
+            color: white;
+            text-shadow: 1px 1px #000;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .cake {
+            width: 220px;
+            margin: 20px auto;
+        }
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .message {
+            font-size: 20px;
+            color: #f14fbb;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 20px auto;
+            animation: fadeIn 3s ease-in-out;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #ffcc00;
+            color: black;
+            cursor: pointer;
+            animation: glowBtn 1.5s infinite alternate;
+        }
+
+        @keyframes glowBtn {
+            from {
+                box-shadow: 0 0 10px yellow;
+            }
+
+            to {
+                box-shadow: 0 0 20px orange;
+            }
+        }
+        .surprise {
+            display: none;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .surprise img {
+            width: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px gold;
+            transition: transform 0.3s;
+        }
+        .surprise img:hover {
+            transform: scale(1.05);
+        }
+        .balloon {
+            width: 500px;
+            height: auto;
+            position: absolute;
+            top: 350px;
+            left: 20px;
+        }
+        .balloon {
+            animation: floatBalloon 4s ease-in-out infinite;
+        }
+        @keyframes floatBalloon {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(2deg);
+            }
+        }
+        @media (max-width: 768px) {
+            .balloon {
+                max-width: 100px;
+                left: 2%;
+                top: 350px;
+            }
+
+            .cake {
+                max-width: 70%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1><img src="cake1.png"> Happy Birthday ,Venkata Sai Vardhan Thimmisetty <img src="cake2.png"></h1>
+    <img class="balloon" src="balloon.png" alt="balloon">
+    <h2>✨ Wishing you joy, health & success, Sai Sir! ✨</h2>
+    <img class="cake" src="saicake.png" alt="Birthday Cake">
+    <div class="message">
+        <p>🎉🎂 Happy Birthday, Sai Sir! 🎂🎉</p>
+        ✨May your day be filled with laughter , joy , and countless special moments.
+        🌟 You inspire us not only with your knowledge 🧠 but also with your kindness 🤝 and dedication 💪.
+        💐 Wishing you endless success 🏆, good health 💪, and happiness 😍 in the year ahead 🌞.
+        🎊🥳 Here’s to many more amazing years of teaching 👨‍🏫 and inspiring 🌈!
+    </div>
+    <button onclick="showSurprise()">🎁 Click for a Surprise</button>
+    <br>
+    <br>
+    <div class="surprise" id="surpriseBox">
+        <p style="font-size:20px; color:#18c69b;">
+            I hope this surprise make good to you!🌟 Once again happy birthday sir ✨ 
+        </p>
+        <img class="s1" src="sai.jpg" alt="image">
+        <img class="s1" src="sai1.jpg" alt="image">
+    </div>
+
+    <script>
+        var showsurprise = false; 
+
+        function showSurprise() {
+            const surpriseBox = document.getElementById("surpriseBox");
+
+            if (showsurprise) {
+                surpriseBox.style.display = "none"; 
+            } else {
+                surpriseBox.style.display = "block"; 
+            }
+
+            showsurprise = !showsurprise;
+        }
+    </script>
+</body>
+</html>
